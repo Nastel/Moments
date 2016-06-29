@@ -1,0 +1,3 @@
+# Moments
+Sample iPhone app that demonstrates streaming to jKool 
+Adding readme... 
