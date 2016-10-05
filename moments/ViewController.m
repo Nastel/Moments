@@ -28,7 +28,7 @@
     // Initialize streaming and specify callback handler.
     NSObject *cbStream = [[jkCallbackHandlerStreaming alloc] initWithViewController:self];
     jkStreaming = [[jKoolStreaming alloc] init];
-    [jkStreaming setToken:@"HdC0YR5u58UTNyPByFe7GXuHgLFtFx28"];
+    [jkStreaming setToken:@"your-token"];
     [jkStreaming initializeStream:cbStream];
     
     // Kick-off locationing
