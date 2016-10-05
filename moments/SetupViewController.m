@@ -140,8 +140,13 @@ didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSe
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data
 {
-    NSString * str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"Received String %@",str);
+    NSUserDefaults *appPrefs = [[NSUserDefaults alloc] init];
+    NSError *error = nil;
+    id object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+     NSString *token = [object objectForKey:@"token"];
+    [appPrefs setObject:token forKey:@"token"];
+
+
 }
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
