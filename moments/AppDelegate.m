@@ -17,7 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [jKoolTracking initializeTracking:@"your-token" enableErrors:YES enableActions:YES onlyIfWifi:YES];
+    NSUserDefaults *appPrefs = [[NSUserDefaults alloc] init];
+    [jKoolTracking initializeTracking:[appPrefs objectForKey:@"token"] enableErrors:YES enableActions:YES onlyIfWifi:YES];
     [jKoolTracking setApplicationName:@"Cathys Application" andDataCenter:@"Cathys Data Center" andResource:@"Activity Resource" andSsn:nil andCorrelators:[NSArray arrayWithObjects:@"123",@"456",@"789", nil] andActivityName:@"Cathys Activity Name"];
     NSSetUncaughtExceptionHandler(&onUncaughtException);
     return YES;
