@@ -1,0 +1,6 @@
+framework module jkool_client_objc_api {
+  umbrella header "jkool-client-objc-api-umbrella.h"
+
+  export *
+  module * { export * }
+}

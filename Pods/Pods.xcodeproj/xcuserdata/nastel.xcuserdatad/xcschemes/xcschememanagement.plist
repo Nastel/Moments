@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-moments.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SocketRocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>jkool-client-objc-api.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>jkool-client-objc-tracking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0CA5414FD215ADE5B2447F299C524763</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69743630B87D3571700AE37DD840792D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7CCCFD13E223C239E7EA149D2F402F2D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C11AC7446A5AB3AFA1A22D14159A5E06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
