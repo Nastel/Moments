@@ -157,15 +157,7 @@ didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSe
 
 
 -(void)register{
-    NSURL *url = [NSURL URLWithString:@"http://test.jkoolcloud.com/jKoolAdmin"];
-    
-    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-    [request setHTTPMethod:@"POST"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    NSString *postString = @"setup=yes&source=iphone&userName=";
+    NSString *postString = @"http://test.jkoolcloud.com/jKoolAdmin?setup=yes&source=iphone&userName=";
     postString = [postString stringByAppendingString:userName.text];
     postString = [postString stringByAppendingString:@"&password="];
     postString = [postString stringByAppendingString:password.text];
@@ -175,6 +167,15 @@ didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSe
     postString = [postString stringByAppendingString:firstName.text];
     postString = [postString stringByAppendingString:@"&lastName="];
     postString = [postString stringByAppendingString:lastName.text];
+    NSURL *url = [NSURL URLWithString:postString];
+    
+    NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+  
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     NSURLSessionDataTask * dataTask = [defaultSession dataTaskWithRequest:request];
     [dataTask resume];
