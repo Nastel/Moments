@@ -23,6 +23,8 @@
 @interface jkLocation : NSObject <CLLocationManagerDelegate>
 
 @property (retain, nonatomic) CLLocation * detectedLocation;
+@property (retain, nonatomic) CLLocationManager * locationManager;
+
 
 - (NSString *) getCoordinates;
 - (void) kickOffLocationing ;

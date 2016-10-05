@@ -23,25 +23,25 @@
 @implementation jkLocation
 
 @synthesize detectedLocation = _detectedLocation;
-CLLocationManager *locationManager;
+@synthesize locationManager = _locationManager;
 
 
 - (void) kickOffLocationing {
 
-    locationManager = [[CLLocationManager alloc] init];
-    if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        [locationManager requestWhenInUseAuthorization];
+    _locationManager = [[CLLocationManager alloc] init];
+    if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [_locationManager requestWhenInUseAuthorization];
     }
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [locationManager startUpdatingLocation];
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [_locationManager startUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations {
     {
         _detectedLocation = [locations lastObject];
-        [locationManager stopUpdatingLocation];
+        [_locationManager stopUpdatingLocation];
 
     }}
 

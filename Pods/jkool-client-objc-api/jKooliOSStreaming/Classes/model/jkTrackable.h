@@ -30,8 +30,8 @@
 @property (nonatomic) long long timeUsec;
 @property (nonatomic) long long startTimeUsec;
 @property (nonatomic) long long endTimeUsec;
-@property (nonatomic) long elapsedTimeUsec;
-@property (nonatomic) long waitTimeUsec;
+@property (nonatomic) long long elapsedTimeUsec;
+@property (nonatomic) long long waitTimeUsec;
 @property (nonatomic) long pid;
 @property (nonatomic) long tid;
 
