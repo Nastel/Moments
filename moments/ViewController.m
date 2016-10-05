@@ -25,10 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Get the token user obtained upon registering
+    NSUserDefaults *appPrefs = [[NSUserDefaults alloc] init];
     // Initialize streaming and specify callback handler.
     NSObject *cbStream = [[jkCallbackHandlerStreaming alloc] initWithViewController:self];
     jkStreaming = [[jKoolStreaming alloc] init];
-    [jkStreaming setToken:@"your-token"];
+    NSString *token = [appPrefs objectForKey:@"token"];
+    [jkStreaming setToken:token];
     [jkStreaming initializeStream:cbStream];
     
     // Kick-off locationing
