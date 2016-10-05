@@ -22,9 +22,12 @@
 		4AA66E701CBFF16F00FFB5E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA66E6F1CBFF16F00FFB5E5 /* UIKit.framework */; };
 		4AA66E721CBFF17D00FFB5E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA66E711CBFF17D00FFB5E5 /* Foundation.framework */; };
 		4AA66E741CBFF18A00FFB5E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA66E731CBFF18A00FFB5E5 /* CoreGraphics.framework */; };
+		9A04C44A1DA433FD0087859F /* jkCallbackHandlerStreaming.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A04C4491DA433FD0087859F /* jkCallbackHandlerStreaming.m */; };
+		D1D5A70E332CC961E7E93356 /* Pods_moments.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636BCF5E82E4EC97613E6FE0 /* Pods_moments.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45151A1F8DAFCC5328CDCE8E /* Pods-moments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moments.release.xcconfig"; path = "Pods/Target Support Files/Pods-moments/Pods-moments.release.xcconfig"; sourceTree = "<group>"; };
 		4A128CB51CD8E0BE00AA2224 /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
 		4A128CB61CD8E0BE00AA2224 /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
 		4A36A5081D0601C500A6A8C0 /* IconImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = IconImage.xcassets; sourceTree = "<group>"; };
@@ -46,6 +49,10 @@
 		4AA66E6F1CBFF16F00FFB5E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4AA66E711CBFF17D00FFB5E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4AA66E731CBFF18A00FFB5E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		636BCF5E82E4EC97613E6FE0 /* Pods_moments.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moments.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A04C4481DA433FD0087859F /* jkCallbackHandlerStreaming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jkCallbackHandlerStreaming.h; sourceTree = "<group>"; };
+		9A04C4491DA433FD0087859F /* jkCallbackHandlerStreaming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jkCallbackHandlerStreaming.m; sourceTree = "<group>"; };
+		C8DD297A134F4BE2219AC6BF /* Pods-moments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moments.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moments/Pods-moments.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,7 @@
 				4AA66E721CBFF17D00FFB5E5 /* Foundation.framework in Frameworks */,
 				4AA66E701CBFF16F00FFB5E5 /* UIKit.framework in Frameworks */,
 				4AA66E6E1CBFDDBD00FFB5E5 /* CoreLocation.framework in Frameworks */,
+				D1D5A70E332CC961E7E93356 /* Pods_moments.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +80,8 @@
 				4AA66E6D1CBFDDBD00FFB5E5 /* CoreLocation.framework */,
 				4AA66E551CBFCCD900FFB5E5 /* moments */,
 				4AA66E541CBFCCD900FFB5E5 /* Products */,
+				B419E89EA8BBCA8B912FEAD6 /* Pods */,
+				996464FF9734BA1F13A5411A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +96,8 @@
 		4AA66E551CBFCCD900FFB5E5 /* moments */ = {
 			isa = PBXGroup;
 			children = (
+				9A04C4481DA433FD0087859F /* jkCallbackHandlerStreaming.h */,
+				9A04C4491DA433FD0087859F /* jkCallbackHandlerStreaming.m */,
 				4A36A5081D0601C500A6A8C0 /* IconImage.xcassets */,
 				4A128CB51CD8E0BE00AA2224 /* happy.png */,
 				4A128CB61CD8E0BE00AA2224 /* sad.png */,
@@ -114,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		996464FF9734BA1F13A5411A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				636BCF5E82E4EC97613E6FE0 /* Pods_moments.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B419E89EA8BBCA8B912FEAD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8DD297A134F4BE2219AC6BF /* Pods-moments.debug.xcconfig */,
+				45151A1F8DAFCC5328CDCE8E /* Pods-moments.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AA66E6A1CBFCCDA00FFB5E5 /* Build configuration list for PBXNativeTarget "moments" */;
 			buildPhases = (
+				C1F79435CA22F77BD749AF2B /* [CP] Check Pods Manifest.lock */,
 				4AA66E4F1CBFCCD900FFB5E5 /* Sources */,
 				4AA66E501CBFCCD900FFB5E5 /* Frameworks */,
 				4AA66E511CBFCCD900FFB5E5 /* Resources */,
+				66F8B852BF09C94E8B181AED /* [CP] Embed Pods Frameworks */,
+				99678D3B3BD3122A2FD72E84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,7 +172,7 @@
 		4AA66E4B1CBFCCD900FFB5E5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Catherine Bernardone";
 				TargetAttributes = {
 					4AA66E521CBFCCD900FFB5E5 = {
@@ -182,6 +214,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		66F8B852BF09C94E8B181AED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moments/Pods-moments-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99678D3B3BD3122A2FD72E84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moments/Pods-moments-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1F79435CA22F77BD749AF2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4AA66E4F1CBFCCD900FFB5E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -192,6 +272,7 @@
 				4AA66E581CBFCCDA00FFB5E5 /* main.m in Sources */,
 				4A36A50F1D060E8700A6A8C0 /* SetupViewController.m in Sources */,
 				4A36A50C1D060E7200A6A8C0 /* HelpViewController.m in Sources */,
+				9A04C44A1DA433FD0087859F /* jkCallbackHandlerStreaming.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,8 +312,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -276,8 +359,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -303,6 +388,7 @@
 		};
 		4AA66E6B1CBFCCDA00FFB5E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8DD297A134F4BE2219AC6BF /* Pods-moments.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = moments/Info.plist;
@@ -314,6 +400,7 @@
 		};
 		4AA66E6C1CBFCCDA00FFB5E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45151A1F8DAFCC5328CDCE8E /* Pods-moments.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = moments/Info.plist;

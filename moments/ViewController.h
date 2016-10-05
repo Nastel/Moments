@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "jkLocation.h"
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate> {
     IBOutlet UIButton *happyMomentButton;
@@ -15,10 +16,9 @@
     IBOutlet UILabel *momentLocation;
     IBOutlet UILabel *momentDateTime;
     IBOutlet UITextView *momentText;
-    CLLocationManager *locationManager;
 }
 
-
+@property (retain, nonatomic) jkLocation * xlocation;
 - (IBAction)remember:(id)sender;
 
 @end

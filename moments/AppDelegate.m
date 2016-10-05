@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "jKoolTracking.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [jKoolTracking initializeTracking:@"HdC0YR5u58UTNyPByFe7GXuHgLFtFx28" enableErrors:YES enableActions:YES onlyIfWifi:YES];
+    [jKoolTracking setApplicationName:@"Cathys Application" andDataCenter:@"Cathys Data Center" andResource:@"Activity Resource" andSsn:nil andCorrelators:[NSArray arrayWithObjects:@"123",@"456",@"789", nil] andActivityName:@"Cathys Activity Name"];
+    NSSetUncaughtExceptionHandler(&onUncaughtException);
     return YES;
 }
 
@@ -26,20 +29,26 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        [jKoolTracking streamjKoolActivity];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        [jKoolTracking createjKoolActivity];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        [jKoolTracking createjKoolActivity];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+void onUncaughtException(NSException *exception)
+{
+    [jKoolTracking jKoolExceptionHandler:exception];
+    // Sleeping is necessary to give it time to streaam.
+    [NSThread sleepForTimeInterval:5.0f];
 }
 
 @end
