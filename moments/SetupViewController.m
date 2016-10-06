@@ -22,11 +22,14 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     NSUserDefaults *appPrefs = [[NSUserDefaults alloc] init];
-    if ([appPrefs objectForKey:@"userName"])
+    if ([appPrefs objectForKey:@"token"])
     {
         setupLabel.text = @"Your jKool User Name";
         setupButton.hidden = TRUE;
         userName.text = [appPrefs objectForKey:@"userName"];
+        firstName.text = [appPrefs objectForKey:@"firstName"];
+        lastName.text = [appPrefs objectForKey:@"lastName"];
+        email.text = [appPrefs objectForKey:@"email"];
         [userName setEnabled:false];
         [firstName setEnabled:false];
         [lastName setEnabled:false];
@@ -128,6 +131,9 @@
         [passwordLabel setHidden:true];
         [confirmPasswordLabel setHidden:true];
         [appPrefs setObject:[userName text] forKey:@"userName"];
+        [appPrefs setObject:[firstName text] forKey:@"firstName"];
+        [appPrefs setObject:[lastName text] forKey:@"lastName"];
+        [appPrefs setObject:[email text] forKey:@"email"];
         [self register];
     }
 }
@@ -143,8 +149,11 @@ didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSe
     NSUserDefaults *appPrefs = [[NSUserDefaults alloc] init];
     NSError *error = nil;
     id object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-     NSString *token = [object objectForKey:@"token"];
-    [appPrefs setObject:token forKey:@"token"];
+    if (error == nil)
+    {
+        NSString *token = [object objectForKey:@"token"];
+    [   appPrefs setObject:token forKey:@"token"];
+    }
 
 
 }
