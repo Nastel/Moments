@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010 jKool, LLC. All Rights Reserved.
+ * Copyright (c) 2016 jKool, LLC. All Rights Reserved.
  *
  * This software is the confidential and proprietary information of
  * jKool, LLC. ("Confidential Information").  You shall not disclose
