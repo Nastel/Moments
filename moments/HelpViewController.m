@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    helpText.text = @"jKool Instructions ...";
+    helpText.text = @"Welcome to jKools Moments app. This app demonstrates streaming and querying to and from a jKool Repository. To use this app you must first register an account in jKool. To do this, simply go to the Account Screen. Enter your information and save. This will create a jKool account for you and store your access token on your device. If you ever delete the app off of your device, you will need to re-register. ";
 }
 
 - (void)didReceiveMemoryWarning {
