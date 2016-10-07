@@ -31,6 +31,8 @@
 @implementation ViewController {
     jKoolStreaming *jkStreaming ;
     NSString *tag;
+    CLGeocoder *geocoder;
+    CLPlacemark *placemark;
 }
 @synthesize xlocation = _xlocation;
 
@@ -44,6 +46,7 @@
     NSString *token = [appPrefs objectForKey:@"token"];
     [jkStreaming setToken:token];
     [jkStreaming initializeStream:cbStream];
+    geocoder = [[CLGeocoder alloc]init];
     
     // Kick-off locationing
     _xlocation = [[jkLocation alloc] init];
@@ -57,6 +60,10 @@
     [momentText setContentOffset:CGPointZero animated:YES];
     momentText.text = @"Enter your moment here ...";
     momentText.editable = YES;
+    
+
+    
+   // momentLocation.text = _xlocation.getCoordinates;
     [super viewWillAppear:TRUE];
 }
 
@@ -124,9 +131,28 @@
     // Stream Event with snapshot and properties
     jkEvent *event = [[jkEvent alloc] initWithName:@"mymoment"];
     [event setMsgText:momentText.text] ;
-    //[event setGeoAddr:[_xlocation getCoordinates]];
+    [event setGeoAddr:[_xlocation getCoordinates]];
     [event setMsgTag:tag];
     [jkStreaming stream:event forUrl:@"event"];
+    
+    
+    // Reverse Geocoding
+    NSLog(@"Resolving the Address");
+    [geocoder reverseGeocodeLocation:[_xlocation detectedLocation] completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (error == nil && [placemarks count] > 0) {
+            placemark = [placemarks lastObject];
+            momentLocation.text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@",
+                                   placemark.subThoroughfare, placemark.thoroughfare,
+                                   placemark.locality,placemark.administrativeArea,
+                                   placemark.country];
+        } else {
+            NSLog(@"%@", error.debugDescription);
+        }
+    } ];
+    
+    
+    
+    
 }
 
 @end
