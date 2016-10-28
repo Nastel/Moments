@@ -182,7 +182,7 @@ didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSe
 
 
 -(void)register{
-    NSString *postString = @"http://test.jkoolcloud.com/jKoolAdmin?setup=yes&source=iphone&userName=";
+    NSString *postString = @"http://jkool.jkoolcloud.com/jKoolAdmin?setup=yes&source=iphone&userName=";
     postString = [postString stringByAppendingString:userName.text];
     postString = [postString stringByAppendingString:@"&password="];
     postString = [postString stringByAppendingString:password.text];

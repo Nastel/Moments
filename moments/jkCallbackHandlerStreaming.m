@@ -29,7 +29,7 @@
 - (void) handlejKoolResponse:(NSData *) data  {
     
 
-    NSString *alertText = @"Yourrrrr happy moment has been saved. Please log into www.jkoolcloud.com to see all of your moments.";
+    NSString *alertText = @"Your happy moment has been saved. Please log into www.jkoolcloud.com to see all of your moments.";
    
     UIAlertController * alert=   [UIAlertController
                                   alertControllerWithTitle:@"Moment Saved"

@@ -177,6 +177,7 @@
 				TargetAttributes = {
 					4AA66E521CBFCCD900FFB5E5 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 59WYD4Y5N8;
 					};
 				};
 			};
@@ -391,6 +392,7 @@
 			baseConfigurationReference = C8DD297A134F4BE2219AC6BF /* Pods-moments.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59WYD4Y5N8;
 				INFOPLIST_FILE = moments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nastel.moments;
@@ -403,6 +405,7 @@
 			baseConfigurationReference = 45151A1F8DAFCC5328CDCE8E /* Pods-moments.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59WYD4Y5N8;
 				INFOPLIST_FILE = moments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nastel.moments;

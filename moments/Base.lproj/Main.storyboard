@@ -220,15 +220,6 @@
                                     <outlet property="delegate" destination="Q7v-Pn-oXK" id="9j4-0f-mfp"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5S-Kc-ob9">
-                                <frame key="frameInset" minX="163" minY="623" width="49" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Okay"/>
-                                <connections>
-                                    <action selector="save:" destination="Q7v-Pn-oXK" eventType="touchDown" id="uMj-cM-D9u"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create a jKool user name or enter and existing one." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y4H-RZ-iSj">
                                 <frame key="frameInset" minX="11" minY="72" width="354" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -324,13 +315,21 @@ RW1haWwQOg
                                     <outlet property="delegate" destination="Q7v-Pn-oXK" id="KMA-Xu-zDJ"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5S-Kc-ob9">
+                                <frame key="frameInset" minX="164" minY="413" width="49" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Okay"/>
+                                <connections>
+                                    <action selector="save:" destination="Q7v-Pn-oXK" eventType="touchDown" id="uMj-cM-D9u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="NYc-v3-Tyo"/>
                                 <exclude reference="cdz-Sl-OZy"/>
-                                <exclude reference="Q5S-Kc-ob9"/>
                                 <exclude reference="Y4H-RZ-iSj"/>
                                 <exclude reference="fxM-QT-PGD"/>
                                 <exclude reference="aUK-Aj-QH6"/>
@@ -342,13 +341,13 @@ RW1haWwQOg
                                 <exclude reference="AeE-3a-NVp"/>
                                 <exclude reference="Fj9-Ek-AUJ"/>
                                 <exclude reference="iEh-oM-j3i"/>
+                                <exclude reference="Q5S-Kc-ob9"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="NYc-v3-Tyo"/>
                                 <include reference="cdz-Sl-OZy"/>
-                                <include reference="Q5S-Kc-ob9"/>
                                 <include reference="Y4H-RZ-iSj"/>
                                 <include reference="fxM-QT-PGD"/>
                                 <include reference="aUK-Aj-QH6"/>
@@ -360,6 +359,7 @@ RW1haWwQOg
                                 <include reference="AeE-3a-NVp"/>
                                 <include reference="Fj9-Ek-AUJ"/>
                                 <include reference="iEh-oM-j3i"/>
+                                <include reference="Q5S-Kc-ob9"/>
                             </mask>
                         </variation>
                     </view>
